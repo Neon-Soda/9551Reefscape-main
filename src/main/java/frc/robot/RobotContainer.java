@@ -122,9 +122,11 @@ public class RobotContainer {
 
         subsystemController.touchpad().onTrue(new InstantCommand(() -> {
             intake.setCoralState(false);
+            intake.setIfRegret(true);
             intake.setState(IntakeStates.Regret, carriage.getState());
         })).toggleOnFalse(new InstantCommand(() -> {
             intake.setCoralState(true);
+            intake.setIfRegret(false);
             intake.setState(IntakeStates.Stop);
         }));
 

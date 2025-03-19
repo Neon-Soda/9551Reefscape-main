@@ -37,6 +37,7 @@ public class Intake extends SubsystemBase{
     boolean ifCoralHolding = false;
     boolean ifScoring = false;
     boolean ifAlgaeTransport = false;
+    boolean ifRegreting = false;
 
     public Intake() {
         configIntake();
@@ -113,6 +114,10 @@ public class Intake extends SubsystemBase{
         ifAlgaeTransport = transport;
     }
 
+    public void setIfRegret(Boolean regret) {
+        ifRegreting = regret;
+    }
+
     public void testIntakeOn() {
         setIntakeVol(Carriage.intakeVoltage);
     }
@@ -122,8 +127,8 @@ public class Intake extends SubsystemBase{
         // SmartDashboard.putNumber("IntakeVelocity", getIntakeVel());
         SmartDashboard.putNumber("SignalStrength", getSignalStrength(true));
         SmartDashboard.putBoolean("IsCoralDetected", isDetected(true));
-        SmartDashboard.putBoolean("IsAlgaeHolding", ifAlgaeHolding);
-        SmartDashboard.putString("IntakeCarriageState", carriageState.toString());
+        // SmartDashboard.putBoolean("IsAlgaeHolding", ifAlgaeHolding);
+        // SmartDashboard.putString("IntakeCarriageState", carriageState.toString());
         SmartDashboard.putString("IntakeState", currentState.toString());
         switch (currentState) {
             case Stop -> {
@@ -158,6 +163,7 @@ public class Intake extends SubsystemBase{
 
             case Regret -> {
                 if(!ifAlgaeHolding && !ifScoring) {
+                    ifRegreting = true;
                     if(carriageState == CarriageStates.ReefL4)
                         setIntakeVol(Carriage.coralRegretL4Voltage);
                     else 
@@ -166,11 +172,11 @@ public class Intake extends SubsystemBase{
             }
 
             case Transport -> {
-                if(ifCoralHolding && !ifScoring) {
+                if(ifCoralHolding && !ifScoring && !ifRegreting) {
                     if(carriageState == CarriageStates.ReefL4)
                     setIntakeVol(Carriage.L4HoldingVoltage);
                 }
-                else if(!ifScoring) {
+                else if(!ifScoring && !ifRegreting) {
                     setIntakeVol(Carriage.L2L3HoldingVoltage);
                 }
             }
