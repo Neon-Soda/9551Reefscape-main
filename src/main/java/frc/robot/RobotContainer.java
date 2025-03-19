@@ -85,7 +85,7 @@ public class RobotContainer {
             intake.setAlgaeTransport(false);
         }));
 
-        autoChooser = AutoBuilder.buildAutoChooser("Test Auto");
+        autoChooser = AutoBuilder.buildAutoChooser("Blue Auto");
 
         SmartDashboard.putData("Auto Mode", autoChooser);
 
