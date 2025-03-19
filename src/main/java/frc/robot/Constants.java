@@ -6,16 +6,14 @@ public class Constants {
     public static final class OIConstants {
         public static final int chassisControllerPort = 0;
         public static final int subsystemControllerPort = 1;
-        public static final int kTestControllerPort = 2;
-        public static final int kDriverYAxis = 1;
-        public static final int kDriverXAxis = 0;
-        public static final int kDriverRotAxis = 2;
-        public static final int kDriverFieldOrientedButtonIdx = 1;//headless mode
+        public static final int testControllerPort = 2;
         public static final double stickDeadband = 0.05;    
       }
 
     public static final class Carriage{
+        // Chassis + elevator in canivore
         public static final String carriageCanBus = "9551CANivore";
+        // Wrist + intake + canrange in rio
         public static final String wristCanBus = "rio";
 
         public static final int leftElevatorMotorID = 13;
@@ -34,8 +32,9 @@ public class Constants {
         public static final double elevatorKA = 0.0275;
         public static final double elevatorKG = 0.785;
 
-        public static final double elevatorTolerance = 0.08;
-        public static final double elevatorTopperTolerance = 0.325;
+        // Larger tolerance on top so wrist can always flip over
+        public static final double elevatorTolerance = 0.125;
+        public static final double elevatorTopperTolerance = 0.415;
 
         public static final double elevatorOffSetTolerace = 0.115;
         public static final double elevatorOffSetPosition = -elevatorOffSetTolerace;
@@ -66,6 +65,8 @@ public class Constants {
         public static final double algaeHoldingVoltage = -0.15;
         public static final double algaeTransportVoltage = -0.25;
         public static final double algaeScoreVoltage = 1;
+
+        // IMPORTANT: CANrange value to need retune in different environments
         public static final double intakeCanRangeDetectLowerLimit = 4850;
         public static final double intakeCanRangeDetectUpperLimit = 6000;
 

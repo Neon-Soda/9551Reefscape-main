@@ -6,8 +6,6 @@ package frc.robot;
 
 import static edu.wpi.first.units.Units.*;
 
-import java.util.List;
-
 import com.ctre.phoenix6.swerve.SwerveModule.DriveRequestType;
 import com.pathplanner.lib.auto.AutoBuilder;
 import com.pathplanner.lib.auto.NamedCommands;
@@ -17,10 +15,8 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandPS5Controller;
-import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.sysid.SysIdRoutine.Direction;
 import frc.robot.Constants.Carriage;
 import frc.robot.Constants.OIConstants;
@@ -46,16 +42,19 @@ public class RobotContainer {
 
     private final Telemetry logger = new Telemetry(MaxSpeed);
 
+    // Two drivers' controller
     private final CommandPS5Controller chassisController = new CommandPS5Controller(OIConstants.chassisControllerPort);
     private final CommandPS5Controller subsystemController = new CommandPS5Controller(OIConstants.subsystemControllerPort);
 
     public final CommandSwerveDrivetrain drivetrain = TunerConstants.createDrivetrain();
 
+    // Construct subsystems
     private final Elevator elevator = new Elevator();
     private final Intake intake = new Intake();
     private final Wrist wrist = new Wrist();
     private final CarriageSystem carriage = new CarriageSystem(elevator, intake, wrist);
 
+    // Pathplanner auto chooser
     private final SendableChooser<Command> autoChooser;
 
     public RobotContainer() {
@@ -68,6 +67,7 @@ public class RobotContainer {
             )
         );
 
+        // Register commands for pathplanner autos
         NamedCommands.registerCommand("ReefL4", new InstantCommand(() -> {
             carriage.setState(CarriageStates.ReefL4);
         }));
@@ -85,6 +85,7 @@ public class RobotContainer {
             intake.setAlgaeTransport(false);
         }));
 
+        // Construct pathplanner auto chooser
         autoChooser = AutoBuilder.buildAutoChooser("Blue Auto");
 
         SmartDashboard.putData("Auto Mode", autoChooser);
@@ -114,12 +115,14 @@ public class RobotContainer {
 
         drivetrain.registerTelemetry(logger::telemeterize);
 
+        // Leftstick - Intake
         subsystemController.L3().onTrue(new InstantCommand(() -> {
             intake.setState(IntakeStates.Intake, carriage.getState());
         })).toggleOnFalse(new InstantCommand(() -> {
             intake.setState(IntakeStates.Stop);
         }));
 
+        // Touchpad - Regret
         subsystemController.touchpad().onTrue(new InstantCommand(() -> {
             intake.setCoralState(false);
             intake.setIfRegret(true);
@@ -130,6 +133,7 @@ public class RobotContainer {
             intake.setState(IntakeStates.Stop);
         }));
 
+        // Rightstick - Carriage to offset
         subsystemController.R3().onTrue(new InstantCommand(() -> {
             intake.setCoralState(false);
             carriage.setState(CarriageStates.OffSet);
@@ -150,6 +154,7 @@ public class RobotContainer {
             carriage.setState(CarriageStates.ReefL4);
         }));
 
+        // Reset elevator and put wrist back to offeset, prevent error accumulating in elevator
         subsystemController.PS().onTrue(new InstantCommand(() -> {
             elevator.resetPosistion();
             wrist.setWristRotation(Carriage.wristOffSetPosition);
@@ -171,6 +176,7 @@ public class RobotContainer {
             carriage.setState(CarriageStates.Net);
         })); 
 
+        // Both chassis driver and subsystem driver can do the scoring
         chassisController.R1().onTrue(new InstantCommand(() -> {
             intake.setCoralState(false);
             intake.setIfScoring(true);

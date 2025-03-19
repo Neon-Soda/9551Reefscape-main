@@ -5,11 +5,14 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.Carriage;
 import frc.robot.subsystems.Carriage.Intake.IntakeStates;
 
+// This is the controller of the entire carriage including elevator, intake, and wrist
+// Different cases of the robot has been divided into different states
 public class CarriageSystem extends SubsystemBase{
     private Elevator elevator;
     private Intake intake;
     private Wrist wrist;
 
+    // States of the carriage
     public enum CarriageStates {
         OffSet,
         ReefL2,
@@ -41,9 +44,12 @@ public class CarriageSystem extends SubsystemBase{
     @Override
     public void periodic() {
         SmartDashboard.putString("CarriageState", currentState.toString());
+
         switch (currentState) {
             case OffSet -> {
-                if(intake.getAlgaeState() == true) {
+                // Algae offset
+                if(intake.getAlgaeState()) {
+                    // The elevatorOffSetPositon is negative due to the error accumulated in elevator
                     if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))) {
                         wrist.setWristRotation(Carriage.wristAlgaeOffSetPosition);
                     }
@@ -57,7 +63,7 @@ public class CarriageSystem extends SubsystemBase{
                         }
                     }
                 }
-                
+                // Coral offset
                 else if(intake.getAlgaeState() == false) {
                     if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))) {
                         wrist.setWristRotation(Carriage.wristOffSetPosition);

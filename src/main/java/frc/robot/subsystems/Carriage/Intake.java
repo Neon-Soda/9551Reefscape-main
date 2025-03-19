@@ -3,18 +3,15 @@ package frc.robot.subsystems.Carriage;
 import com.ctre.phoenix6.configs.CANrangeConfiguration;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.controls.DutyCycleOut;
-import com.ctre.phoenix6.controls.VelocityVoltage;
 import com.ctre.phoenix6.hardware.CANrange;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 
-import edu.wpi.first.wpilibj.DutyCycle;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.Carriage;
 import frc.robot.subsystems.Carriage.CarriageSystem.CarriageStates;
-import frc.lib.math.Conversions;
 
 public class Intake extends SubsystemBase{
     private TalonFX intakeMotor = new TalonFX(Carriage.intakeMotorID, Carriage.wristCanBus);
@@ -23,6 +20,7 @@ public class Intake extends SubsystemBase{
     private CANrangeConfiguration canRangeConfig = new CANrangeConfiguration();
     private DutyCycleOut intakeDutyCycleOut = new DutyCycleOut(0);
 
+    // Intake has too many states and will be complex to do in carriageSystem.java, so seperate it into its own states
     public enum IntakeStates {
         Stop,
         Intake,
@@ -33,6 +31,8 @@ public class Intake extends SubsystemBase{
 
     IntakeStates currentState = IntakeStates.Stop;
     CarriageStates carriageState = CarriageStates.OffSet;
+
+    // Flags for different states
     boolean ifAlgaeHolding = false;
     boolean ifCoralHolding = false;
     boolean ifScoring = false;
@@ -69,14 +69,13 @@ public class Intake extends SubsystemBase{
         intakeMotor.stopMotor();
     }
 
-    public double getIntakeVel() {
-        return Conversions.RPSToMPS(intakeMotor.getVelocity().getValueAsDouble(),Carriage.intakeWheelDiameter * 2 * Math.PI);
-    }
-
+    // Return the reading from canrange
     public double getSignalStrength(boolean refresh) {
         return intakeCanRange.getSignalStrength(refresh).getValueAsDouble();
     }
 
+    // The embeded isDetected() method will always be true since the other side of the intake will always be detected
+    // Checking the distance value return by canrange meet the [coral in] value or not
     public boolean isDetected(boolean refresh) {
         return Carriage.intakeCanRangeDetectUpperLimit >= getSignalStrength(refresh) && getSignalStrength(refresh) >= Carriage.intakeCanRangeDetectLowerLimit;
     }
@@ -85,6 +84,7 @@ public class Intake extends SubsystemBase{
         currentState = state;
     }
 
+    // Overrides setState() method for situations that requires the state of elevator
     public void setState(IntakeStates state, CarriageStates carriageState) {
         currentState = state;
         this.carriageState = carriageState;
@@ -129,9 +129,11 @@ public class Intake extends SubsystemBase{
         SmartDashboard.putBoolean("IsCoralDetected", isDetected(true));
         // SmartDashboard.putBoolean("IsAlgaeHolding", ifAlgaeHolding);
         // SmartDashboard.putString("IntakeCarriageState", carriageState.toString());
-        SmartDashboard.putString("IntakeState", currentState.toString());
+        // SmartDashboard.putString("IntakeState", currentState.toString());
+
         switch (currentState) {
             case Stop -> {
+                // Needs to lock algae in place and more voltage to lock algae when the wrist is flipping
                 if(!ifAlgaeHolding)
                     stopIntake();
                 else if(ifAlgaeHolding) {
@@ -142,14 +144,15 @@ public class Intake extends SubsystemBase{
                         setIntakeVol(Carriage.algaeHoldingVoltage);
                     }
                 }
-                SmartDashboard.putBoolean("IntakeOn", false);
             }
 
             case Intake -> {
+                // Intake algae
                 if(carriageState == CarriageStates.AlgaeL1 || carriageState == CarriageStates.AlgaeL2) {
                     setIntakeVol(Carriage.algaeIntakeVoltage);
                     ifAlgaeHolding = true;
                 } 
+                // Intake coral until detected by canrange
                 else {
                     ifAlgaeHolding = false;
                     if(isDetected(true)) {
@@ -162,6 +165,7 @@ public class Intake extends SubsystemBase{
             }
 
             case Regret -> {
+                // Move coral back since sometimes canrange overshoots and L4's gavity
                 if(!ifAlgaeHolding && !ifScoring) {
                     ifRegreting = true;
                     if(carriageState == CarriageStates.ReefL4)
@@ -171,6 +175,7 @@ public class Intake extends SubsystemBase{
                 }
             }
 
+            // Lock coral in place while elevator moving
             case Transport -> {
                 if(ifCoralHolding && !ifScoring && !ifRegreting) {
                     if(carriageState == CarriageStates.ReefL4)
@@ -182,13 +187,15 @@ public class Intake extends SubsystemBase{
             }
 
             case Score -> {
+                // Algae score
                 if(ifAlgaeHolding) {
-                    ifAlgaeHolding = false;
                     setIntakeVol(Carriage.algaeScoreVoltage);
+                    ifAlgaeHolding = false;
                 }
+                // Coral socre
                 else {
-                    ifCoralHolding = false;
                     setIntakeVol(Carriage.coralScoreVoltage);
+                    ifCoralHolding = false;
                 }
             }
         }
