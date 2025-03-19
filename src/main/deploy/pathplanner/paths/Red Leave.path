@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 8.493312256809338,
-        "y": 6.150462062256809
+        "x": 9.33280349589012,
+        "y": 0.8305533189120388
       },
       "prevControl": null,
       "nextControl": {
-        "x": 6.931225680933852,
-        "y": 6.167534046692607
+        "x": 11.067437820665567,
+        "y": 0.8421073611178065
       },
       "isLocked": false,
       "linkedName": null
     },
     {
       "anchor": {
-        "x": 5.667898832684825,
-        "y": 6.150462062256809
+        "x": 12.99166894366786,
+        "y": 0.8305533189120388
       },
       "prevControl": {
-        "x": 6.931225680933852,
-        "y": 6.150462062256809
+        "x": 11.072951376891938,
+        "y": 0.8365938048914389
       },
       "nextControl": null,
       "isLocked": false,
@@ -31,19 +31,7 @@
   "rotationTargets": [],
   "constraintZones": [],
   "pointTowardsZones": [],
-  "eventMarkers": [
-    {
-      "name": "CoralScore",
-      "waypointRelativePos": 0.4961501443695738,
-      "endWaypointRelativePos": null,
-      "command": {
-        "type": "named",
-        "data": {
-          "name": "CoralScore"
-        }
-      }
-    }
-  ],
+  "eventMarkers": [],
   "globalConstraints": {
     "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
@@ -54,13 +42,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 179.9748057316881
+    "rotation": -179.92246659502354
   },
   "reversed": false,
-  "folder": null,
+  "folder": "Competiton Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -179.73026104252318
+    "rotation": 0.0
   },
   "useDefaultConstraints": true
 }
