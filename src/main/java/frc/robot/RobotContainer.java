@@ -86,7 +86,7 @@ public class RobotContainer {
         }));
 
         // Construct pathplanner auto chooser
-        autoChooser = AutoBuilder.buildAutoChooser("Blue Auto");
+        autoChooser = AutoBuilder.buildAutoChooser("Default");
 
         SmartDashboard.putData("Auto Mode", autoChooser);
 

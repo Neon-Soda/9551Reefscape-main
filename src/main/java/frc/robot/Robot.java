@@ -15,7 +15,6 @@ public class Robot extends TimedRobot {
 
   public Robot() {
     m_robotContainer = new RobotContainer();
-    m_robotContainer.resetRobotCentric(); // Reset robot's head as booting up
   }
 
   @Override
@@ -35,6 +34,7 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+    m_robotContainer.resetRobotCentric(); // Reset robot's head as booting up
 
     if (m_autonomousCommand != null) {
       m_autonomousCommand.schedule();
