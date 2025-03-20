@@ -24,7 +24,7 @@ public class Constants {
         public static final double Vel = 10.0;
         public static final double Jer = 0.0;
 
-        public static final double elevatorKP = 2.95; 
+        public static final double elevatorKP = 3.15; 
         public static final double elevatorKI = 0.0;
         public static final double elevatorKD = 0.625;
         public static final double elevatorKS = 0.030909; 
@@ -36,21 +36,20 @@ public class Constants {
         public static final double elevatorTolerance = 0.125;
         public static final double elevatorTopperTolerance = 0.415;
 
-        public static final double elevatorOffSetTolerace = 0.115;
+        public static final double elevatorOffSetTolerace = 0.165;
         public static final double elevatorOffSetPosition = -elevatorOffSetTolerace;
         public static final double elevatorL1Position = elevatorOffSetPosition;
         public static final double elevatorL2Position = 1.251;
-        public static final double elevatorL3Position = 2.458;
+        public static final double elevatorL3Position = 2.58;
         public static final double elevatorL4Position = 5.3;
         public static final double elevatorAlgaeL1Position = 1.864;
         public static final double elevatorAlgaeL2Position = 3.526;
         public static final double elevatorAlgaeOffSetPosition = 1;
-        public static final double elevatorNetPosition = 5.5;
+        public static final double elevatorNetPosition = 5.47;
         public static final double elevatorProcessorPosition = 1;
 
-
         public static final double minHeight = elevatorOffSetPosition;
-        public static final double maxHeight = 5.6;
+        public static final double maxHeight = 5.47;
 
         public static final int intakeMotorID = 15;
         public static final double intakeWheelDiameter = 0.1;
@@ -94,7 +93,7 @@ public class Constants {
         public static final double wristAlgaePosition = 0.938;
         public static final double wristAlgaeLiftPosition = 0.65;
         public static final double wristAlgaeOffSetPosition = 0.62;
-        public static final double wristNetPosition = 0.35;
+        public static final double wristNetPosition = 0.5;
         public static final double wristProcessorPosition = 1.125;
 
         public static final double minRotation = -0.025;

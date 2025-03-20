@@ -198,6 +198,14 @@ public class RobotContainer {
             intake.setAlgaeState(false);
             intake.setAlgaeTransport(false);
         }));
+
+        subsystemController.create().onTrue(new InstantCommand(() -> {
+            intake.playSong();
+        }));
+
+        subsystemController.options().onTrue(new InstantCommand(() -> {
+            intake.stopSong();
+        }));
     }
 
     public Command getAutonomousCommand() {

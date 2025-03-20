@@ -1,5 +1,6 @@
 package frc.robot.subsystems.Carriage;
 
+import com.ctre.phoenix6.Orchestra;
 import com.ctre.phoenix6.configs.CANrangeConfiguration;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.controls.DutyCycleOut;
@@ -19,6 +20,8 @@ public class Intake extends SubsystemBase{
     private CANrange intakeCanRange = new CANrange(Carriage.intakeCanRangeID, Carriage.wristCanBus);
     private CANrangeConfiguration canRangeConfig = new CANrangeConfiguration();
     private DutyCycleOut intakeDutyCycleOut = new DutyCycleOut(0);
+
+    private Orchestra player = new Orchestra();
 
     // Intake has too many states and will be complex to do in carriageSystem.java, so seperate it into its own states
     public enum IntakeStates {
@@ -58,6 +61,9 @@ public class Intake extends SubsystemBase{
 
         intakeMotor.getConfigurator().apply(intakeConfig);
         intakeCanRange.getConfigurator().apply(canRangeConfig);
+
+        player.addInstrument(intakeMotor);
+        var status = player.loadMusic("mario.chrp");
     }
 
     public void setIntakeVol(double vol) {
@@ -120,6 +126,14 @@ public class Intake extends SubsystemBase{
 
     public void testIntakeOn() {
         setIntakeVol(Carriage.intakeVoltage);
+    }
+
+    public void playSong() {
+        player.play();
+    }
+
+    public void stopSong() {
+        player.stop();
     }
 
     @Override
