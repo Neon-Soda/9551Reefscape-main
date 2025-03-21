@@ -172,9 +172,15 @@ public class RobotContainer {
             carriage.setState(CarriageStates.Processor);
         }));
         
-        subsystemController.L1().onTrue(new InstantCommand(() -> {
-            carriage.setState(CarriageStates.Net);
-        })); 
+        // subsystemController.L1().onTrue(new InstantCommand(() -> {
+        //     carriage.setState(CarriageStates.Net);
+        // })); 
+
+        subsystemController.R2().onTrue(new InstantCommand(() -> {
+            carriage.setForceWristRotate(true);
+        })).toggleOnFalse(new InstantCommand(() -> {
+            carriage.setForceWristRotate(false);
+        }));
 
         // Both chassis driver and subsystem driver can do the scoring
         chassisController.R1().onTrue(new InstantCommand(() -> {

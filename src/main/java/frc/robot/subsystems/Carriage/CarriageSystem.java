@@ -24,8 +24,9 @@ public class CarriageSystem extends SubsystemBase{
         Processor
     }
 
-    CarriageStates
-     currentState = CarriageStates.OffSet;
+    CarriageStates currentState = CarriageStates.OffSet;
+
+    boolean forceWristRotate = false;
 
     public CarriageSystem(Elevator elevator, Intake intake, Wrist wrist) {
         this.elevator = elevator;
@@ -40,6 +41,14 @@ public class CarriageSystem extends SubsystemBase{
     public CarriageStates getState() {
         return currentState;
     }
+
+    public void setForceWristRotate(boolean force) {
+        forceWristRotate = force;
+    }
+
+    public boolean getForceWristRotate() {
+        return forceWristRotate;
+    }
     
     @Override
     public void periodic() {
@@ -50,14 +59,14 @@ public class CarriageSystem extends SubsystemBase{
                 // Algae offset
                 if(intake.getAlgaeState()) {
                     // The elevatorOffSetPositon is negative due to the error accumulated in elevator
-                    if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))) {
+                    if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace)) || forceWristRotate) {
                         wrist.setWristRotation(Carriage.wristAlgaeOffSetPosition);
                     }
                     else if(!elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))){
                         wrist.setWristRotation(Carriage.wristAlgaeLiftPosition);
                         if(wrist.atDesiredRotation(Carriage.wristAlgaeLiftPosition)) {
                             elevator.setElevatorHeight(Carriage.elevatorAlgaeOffSetPosition);
-                            if(elevator.atDesiredHeight(Carriage.elevatorAlgaeOffSetPosition)) {
+                            if(elevator.atDesiredHeight(Carriage.elevatorAlgaeOffSetPosition) || forceWristRotate) {
                                 wrist.setWristRotation(Carriage.wristAlgaeOffSetPosition);
                             }
                         }
@@ -65,14 +74,14 @@ public class CarriageSystem extends SubsystemBase{
                 }
                 // Coral offset
                 else if(intake.getAlgaeState() == false) {
-                    if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))) {
+                    if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace)) || forceWristRotate) {
                         wrist.setWristRotation(Carriage.wristOffSetPosition);
                     }
                     else if(!elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))){
                         wrist.setWristRotation(Carriage.wristLiftPosition);
                         if(wrist.atDesiredRotation(Carriage.wristLiftPosition)) {
                             elevator.setElevatorHeight(Carriage.elevatorOffSetPosition);
-                            if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace))) {
+                            if(elevator.atDesiredHeight(Math.abs(Carriage.elevatorOffSetPosition + Carriage.elevatorOffSetTolerace)) || forceWristRotate) {
                                 wrist.setWristRotation(Carriage.wristOffSetPosition);
                             }
                         }
@@ -86,7 +95,7 @@ public class CarriageSystem extends SubsystemBase{
                 if(wrist.atDesiredRotation(Carriage.wristLiftPosition)) {
                     elevator.setElevatorHeight(Carriage.elevatorL2Position);
                 }
-                if(elevator.atDesiredHeight(Carriage.elevatorL2Position,true)) {
+                if(elevator.atDesiredHeight(Carriage.elevatorL2Position,true) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristL2L3Position);
                 }
             }
@@ -97,7 +106,7 @@ public class CarriageSystem extends SubsystemBase{
                 if(wrist.atDesiredRotation(Carriage.wristLiftPosition)) {
                     elevator.setElevatorHeight(Carriage.elevatorL3Position);
                 }
-                if(elevator.atDesiredHeight(Carriage.elevatorL3Position,true)) {
+                if(elevator.atDesiredHeight(Carriage.elevatorL3Position,true) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristL2L3Position);
                 }
             }
@@ -107,24 +116,28 @@ public class CarriageSystem extends SubsystemBase{
                 wrist.setWristRotation(Carriage.wristLiftPosition);
                 if(wrist.atDesiredRotation(Carriage.wristLiftPosition)) {
                     elevator.setElevatorHeight(Carriage.elevatorL4Position);
-                }
-                if(elevator.atDesiredHeight(Carriage.elevatorL4Position,true)) {
+                }  
+                if(elevator.atDesiredHeight(Carriage.elevatorL4Position,true) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristL4Position);
                 }
             }
 
             case AlgaeL1 -> {
                 wrist.setWristRotation(Carriage.wristAlgaeLiftPosition);
-                elevator.setElevatorHeight(Carriage.elevatorAlgaeL1Position);
-                if(elevator.atDesiredHeight(Carriage.elevatorAlgaeL1Position,true)) {
+                if(wrist.atDesiredRotation(Carriage.wristAlgaeLiftPosition)) {
+                    elevator.setElevatorHeight(Carriage.elevatorAlgaeL1Position);
+                }  
+                if(elevator.atDesiredHeight(Carriage.elevatorAlgaeL1Position,true) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristAlgaePosition);
                 }
             }
 
             case AlgaeL2 -> {
                 wrist.setWristRotation(Carriage.wristAlgaeLiftPosition);
-                elevator.setElevatorHeight(Carriage.elevatorAlgaeL2Position);
-                if(elevator.atDesiredHeight(Carriage.elevatorAlgaeL2Position,true)) {
+                if(wrist.atDesiredRotation(Carriage.wristAlgaeLiftPosition)) {
+                    elevator.setElevatorHeight(Carriage.elevatorAlgaeL2Position);
+                }  
+                if(elevator.atDesiredHeight(Carriage.elevatorAlgaeL2Position,true) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristAlgaePosition);
                 }
             }
@@ -139,8 +152,10 @@ public class CarriageSystem extends SubsystemBase{
 
             case Processor -> {
                 wrist.setWristRotation(Carriage.wristAlgaeLiftPosition);
-                elevator.setElevatorHeight(Carriage.elevatorProcessorPosition);
-                if(elevator.atDesiredHeight(Carriage.elevatorProcessorPosition)) {
+                if(wrist.atDesiredRotation(Carriage.wristAlgaeLiftPosition)) {
+                    elevator.setElevatorHeight(Carriage.elevatorProcessorPosition);
+                }  
+                if(elevator.atDesiredHeight(Carriage.elevatorProcessorPosition) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristProcessorPosition);
                     intake.setAlgaeTransport(true);
                 }

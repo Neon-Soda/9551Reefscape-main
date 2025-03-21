@@ -33,15 +33,15 @@ public class Constants {
         public static final double elevatorKG = 0.785;
 
         // Larger tolerance on top so wrist can always flip over
-        public static final double elevatorTolerance = 0.125;
-        public static final double elevatorTopperTolerance = 0.415;
+        public static final double elevatorTolerance = 0.325;
+        public static final double elevatorTopperTolerance = 0.625;
 
         public static final double elevatorOffSetTolerace = 0.165;
         public static final double elevatorOffSetPosition = -elevatorOffSetTolerace;
         public static final double elevatorL1Position = elevatorOffSetPosition;
         public static final double elevatorL2Position = 1.251;
         public static final double elevatorL3Position = 2.58;
-        public static final double elevatorL4Position = 5.3;
+        public static final double elevatorL4Position = 5.215;
         public static final double elevatorAlgaeL1Position = 1.864;
         public static final double elevatorAlgaeL2Position = 3.526;
         public static final double elevatorAlgaeOffSetPosition = 1;
@@ -57,6 +57,7 @@ public class Constants {
         public static final double intakeVoltage = 0.35;
         public static final double L4HoldingVoltage = -0.06;
         public static final double L2L3HoldingVoltage = -0.015;
+        public static final double coralL1ScoreVoltage = 0.65;
         public static final double coralScoreVoltage = 1;
         public static final double coralRegretL4Voltage = -0.325;
         public static final double coralRegretVoltage = -0.125;
@@ -93,7 +94,8 @@ public class Constants {
         public static final double wristAlgaePosition = 0.938;
         public static final double wristAlgaeLiftPosition = 0.65;
         public static final double wristAlgaeOffSetPosition = 0.62;
-        public static final double wristNetPosition = 0.5;
+        public static final double wristNetPosition = 0.6;
+        public static final double wristNetScoringPosition = 0.3;
         public static final double wristProcessorPosition = 1.125;
 
         public static final double minRotation = -0.025;
