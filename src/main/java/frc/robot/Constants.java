@@ -11,7 +11,7 @@ public class Constants {
       }
 
     public static final class Carriage{
-        // Chassis in canivore
+        // Chassis in canivore (now plugged back to rio)
         public static final String chaasisCanbus = "rio";
         // ELevator + wrist + intake + canrange in rio
         public static final String carriageCanbus = "rio";
@@ -69,6 +69,7 @@ public class Constants {
         // IMPORTANT: CANrange value to need retune in different environments
         public static final double intakeCanRangeDetectLowerLimit = 6500;
         public static final double intakeCanRangeDetectUpperLimit = 8500;
+        
 
         public static final int wristMotorID = 17;
         public static final int wristEncoderID = 18;
