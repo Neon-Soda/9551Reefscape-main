@@ -171,9 +171,9 @@ public class RobotContainer {
             carriage.setState(CarriageStates.Processor);
         }));
         
-        // subsystemController.L1().onTrue(new InstantCommand(() -> {
-        //     carriage.setState(CarriageStates.Net);
-        // })); 
+        subsystemController.L1().onTrue(new InstantCommand(() -> {
+            carriage.setState(CarriageStates.Net);
+        })); 
                                   
         subsystemController.R2().onTrue(new InstantCommand(() -> {
             carriage.setForceWristRotate(true);

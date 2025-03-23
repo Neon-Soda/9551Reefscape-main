@@ -41,7 +41,7 @@ public class Constants {
         public static final double elevatorL1Position = elevatorOffSetPosition;
         public static final double elevatorL2Position = 1.251;
         public static final double elevatorL3Position = 2.58;
-        public static final double elevatorL4Position = 5.215;
+        public static final double elevatorL4Position = 5.075;
         public static final double elevatorAlgaeL1Position = 2.25;
         public static final double elevatorAlgaeL2Position = 3.85;
         public static final double elevatorAlgaeOffSetPosition = 1;
@@ -91,7 +91,7 @@ public class Constants {
         public static final double wristOffSetPosition = -0.025;
         public static final double wristLiftPosition = 0.111;
         public static final double wristL2L3Position = 0.178;
-        public static final double wristL4Position = 0.307;
+        public static final double wristL4Position = 0.35;
         public static final double wristAlgaePosition = 0.938;
         public static final double wristAlgaeLiftPosition = 0.65;
         public static final double wristAlgaeOffSetPosition = 0.62;
