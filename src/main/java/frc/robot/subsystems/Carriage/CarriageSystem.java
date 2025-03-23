@@ -145,7 +145,7 @@ public class CarriageSystem extends SubsystemBase{
             case Net -> {
                 wrist.setWristRotation(Carriage.wristAlgaeLiftPosition);
                 elevator.setElevatorHeight(Carriage.elevatorNetPosition);
-                if(elevator.atDesiredHeight(Carriage.elevatorNetPosition,true)) {
+                if(elevator.atDesiredHeight(Carriage.elevatorNetPosition,true) || forceWristRotate) {
                     wrist.setWristRotation(Carriage.wristNetPosition);
                 }
             }
