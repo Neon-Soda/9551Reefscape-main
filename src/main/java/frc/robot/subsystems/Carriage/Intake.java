@@ -15,9 +15,9 @@ import frc.robot.Constants.Carriage;
 import frc.robot.subsystems.Carriage.CarriageSystem.CarriageStates;
 
 public class Intake extends SubsystemBase{
-    private TalonFX intakeMotor = new TalonFX(Carriage.intakeMotorID, Carriage.wristCanBus);
+    private TalonFX intakeMotor = new TalonFX(Carriage.intakeMotorID, Carriage.carriageCanbus);
     private TalonFXConfiguration intakeConfig = new TalonFXConfiguration();
-    private CANrange intakeCanRange = new CANrange(Carriage.intakeCanRangeID, Carriage.wristCanBus);
+    private CANrange intakeCanRange = new CANrange(Carriage.intakeCanRangeID, Carriage.carriageCanbus);
     private CANrangeConfiguration canRangeConfig = new CANrangeConfiguration();
     private DutyCycleOut intakeDutyCycleOut = new DutyCycleOut(0);
 

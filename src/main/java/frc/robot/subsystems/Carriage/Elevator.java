@@ -13,8 +13,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.Carriage;
 
 public class Elevator extends SubsystemBase{
-    private TalonFX leftMotor = new TalonFX(Carriage.leftElevatorMotorID, Carriage.carriageCanBus);
-    private TalonFX rightMotor = new TalonFX(Carriage.rightElevatorMotorID, Carriage.carriageCanBus);
+    private TalonFX leftMotor = new TalonFX(Carriage.leftElevatorMotorID, Carriage.carriageCanbus);
+    private TalonFX rightMotor = new TalonFX(Carriage.rightElevatorMotorID, Carriage.carriageCanbus);
     private TalonFXConfiguration leftMotorConfig = new TalonFXConfiguration();
     private TalonFXConfiguration rightMotorConfig = new TalonFXConfiguration();
     private MotionMagicVoltage elevatorMagic = new MotionMagicVoltage(0);

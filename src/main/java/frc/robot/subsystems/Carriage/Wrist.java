@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.Carriage;
 
 public class Wrist extends SubsystemBase{
-    private TalonFX wristMotor = new TalonFX(Carriage.wristMotorID, Carriage.wristCanBus);
+    private TalonFX wristMotor = new TalonFX(Carriage.wristMotorID, Carriage.carriageCanbus);
     private TalonFXConfiguration wristConfig = new TalonFXConfiguration();
     private MotionMagicVoltage wristMagic = new MotionMagicVoltage(0);
 

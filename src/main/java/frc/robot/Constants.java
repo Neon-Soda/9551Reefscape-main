@@ -11,10 +11,10 @@ public class Constants {
       }
 
     public static final class Carriage{
-        // Chassis + elevator in canivore
-        public static final String carriageCanBus = "9551CANivore";
-        // Wrist + intake + canrange in rio
-        public static final String wristCanBus = "rio";
+        // Chassis in canivore
+        public static final String chaasisCanbus = "rio";
+        // ELevator + wrist + intake + canrange in rio
+        public static final String carriageCanbus = "rio";
 
         public static final int leftElevatorMotorID = 13;
         public static final int rightElevatorMotorID = 14;
@@ -24,7 +24,7 @@ public class Constants {
         public static final double Vel = 10.0;
         public static final double Jer = 0.0;
 
-        public static final double elevatorKP = 3.15; 
+        public static final double elevatorKP = 3.25; 
         public static final double elevatorKI = 0.0;
         public static final double elevatorKD = 0.625;
         public static final double elevatorKS = 0.030909; 
@@ -36,14 +36,14 @@ public class Constants {
         public static final double elevatorTolerance = 0.325;
         public static final double elevatorTopperTolerance = 0.625;
 
-        public static final double elevatorOffSetTolerace = 0.165;
+        public static final double elevatorOffSetTolerace = 0.185;
         public static final double elevatorOffSetPosition = -elevatorOffSetTolerace;
         public static final double elevatorL1Position = elevatorOffSetPosition;
         public static final double elevatorL2Position = 1.251;
         public static final double elevatorL3Position = 2.58;
         public static final double elevatorL4Position = 5.215;
-        public static final double elevatorAlgaeL1Position = 1.864;
-        public static final double elevatorAlgaeL2Position = 3.526;
+        public static final double elevatorAlgaeL1Position = 2.25;
+        public static final double elevatorAlgaeL2Position = 3.85;
         public static final double elevatorAlgaeOffSetPosition = 1;
         public static final double elevatorNetPosition = 5.47;
         public static final double elevatorProcessorPosition = 1;
@@ -67,8 +67,8 @@ public class Constants {
         public static final double algaeScoreVoltage = 1;
 
         // IMPORTANT: CANrange value to need retune in different environments
-        public static final double intakeCanRangeDetectLowerLimit = 4850;
-        public static final double intakeCanRangeDetectUpperLimit = 6000;
+        public static final double intakeCanRangeDetectLowerLimit = 6500;
+        public static final double intakeCanRangeDetectUpperLimit = 8500;
 
         public static final int wristMotorID = 17;
         public static final int wristEncoderID = 18;
