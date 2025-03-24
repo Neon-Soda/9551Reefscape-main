@@ -102,4 +102,9 @@ public class Constants {
         public static final double minRotation = -0.025;
         public static final double maxRotation = 1.1;
     }
+
+    public static final class VisionConstants {
+        public static final String limelightName = "";
+        public static final int[] targetAprilTags = {6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22};
+    }
 }
