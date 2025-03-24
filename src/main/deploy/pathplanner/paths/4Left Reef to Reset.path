@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 1.638,
-        "y": 7.33
+        "x": 3.703733766233766,
+        "y": 3.0563311688311687
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.9918644470843594,
-        "y": 6.56527142639286
+        "x": 3.157982881687118,
+        "y": 2.488069065200592
       },
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "Left 3 End"
     },
     {
       "anchor": {
-        "x": 2.9060064935064935,
-        "y": 5.499370941558441
+        "x": 2.849025974025974,
+        "y": 1.995068993506493
       },
       "prevControl": {
-        "x": 2.5814659497294974,
-        "y": 5.846459594183603
+        "x": 3.06414992028004,
+        "y": 2.1224333831453457
       },
       "nextControl": null,
       "isLocked": false,
@@ -33,7 +33,7 @@
   "pointTowardsZones": [],
   "eventMarkers": [],
   "globalConstraints": {
-    "maxVelocity": 3.0,
+    "maxVelocity": 1.0,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
@@ -45,10 +45,10 @@
     "rotation": 0.0
   },
   "reversed": false,
-  "folder": "Test Paths",
+  "folder": "Left Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": 127.00000000000001
+    "rotation": 56.30993247402026
   },
-  "useDefaultConstraints": true
+  "useDefaultConstraints": false
 }

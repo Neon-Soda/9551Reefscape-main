@@ -4,7 +4,10 @@
   "holonomicMode": true,
   "pathFolders": [
     "Competiton Paths",
-    "Test Paths"
+    "Left Paths",
+    "Middle Left Paths",
+    "Middle Right Paths",
+    "Right Paths"
   ],
   "autoFolders": [
     "Competition Autos",

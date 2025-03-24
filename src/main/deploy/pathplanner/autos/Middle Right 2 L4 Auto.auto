@@ -7,7 +7,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Middle to Reef"
+            "pathName": "1Middle Left to Reef"
           }
         },
         {
@@ -55,13 +55,13 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 0.2
+            "waitTime": 0.3
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Middle Middle"
+            "pathName": "2Middle Left Reef to Source"
           }
         },
         {
@@ -83,15 +83,51 @@
           }
         },
         {
+          "type": "named",
+          "data": {
+            "name": "Stop_Intake"
+          }
+        },
+        {
           "type": "path",
           "data": {
-            "pathName": "Middle End"
+            "pathName": "3Middle Left Source to Reef"
           }
         },
         {
           "type": "named",
           "data": {
-            "name": "Stop_Intake"
+            "name": "CoralScore"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "StopCoralScore"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Movement"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.3
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "4Middle Left Reef to Reset"
           }
         }
       ]
