@@ -31,7 +31,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.2
+            "waitTime": 1.0
           }
         },
         {
@@ -61,7 +61,37 @@
         {
           "type": "path",
           "data": {
+            "pathName": "Middle Middle"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Intake"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.2
+          }
+        },
+        {
+          "type": "path",
+          "data": {
             "pathName": "Middle End"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Stop_Intake"
           }
         }
       ]

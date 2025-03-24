@@ -8,10 +8,10 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.VisionConstants;
 import frc.robot.subsystems.Vision.LimelightHelpers.RawFiducial;
 
-public class LimelightSubsystem extends SubsystemBase {
+public class LimeLightSubsystem extends SubsystemBase {
     private RawFiducial[] fiducials;
 
-    public LimelightSubsystem() {
+    public LimeLightSubsystem() {
         configLimelight();
     }
 
