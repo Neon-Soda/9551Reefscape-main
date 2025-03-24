@@ -41,7 +41,7 @@ public class Constants {
         public static final double elevatorL1Position = elevatorOffSetPosition;
         public static final double elevatorL2Position = 1.251;
         public static final double elevatorL3Position = 2.58;
-        public static final double elevatorL4Position = 5.075;
+        public static final double elevatorL4Position = 5.2;
         public static final double elevatorAlgaeL1Position = 2.25;
         public static final double elevatorAlgaeL2Position = 3.85;
         public static final double elevatorAlgaeOffSetPosition = 1;
