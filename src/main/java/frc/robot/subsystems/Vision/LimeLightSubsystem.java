@@ -29,6 +29,7 @@ public class LimeLightSubsystem extends SubsystemBase {
     @Override
     public void periodic() {
         SmartDashboard.putNumber("AprilTagTx", getTX());
+        SmartDashboard.putNumber("AprilTagTy", getTY());
     }
 
     public RawFiducial getClosestFiducial() {
