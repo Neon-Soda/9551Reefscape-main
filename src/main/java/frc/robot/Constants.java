@@ -11,7 +11,7 @@ public class Constants {
       }
 
     public static final class Carriage{
-        // Chassis in canivore (now plugged back to rio)
+        // Chassis in canivore (now plugged to rio)
         public static final String chaasisCanbus = "rio";
         // ELevator + wrist + intake + canrange in rio
         public static final String carriageCanbus = "rio";
