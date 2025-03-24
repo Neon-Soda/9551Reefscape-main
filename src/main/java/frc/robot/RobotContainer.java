@@ -28,6 +28,7 @@ import frc.robot.subsystems.Carriage.Intake;
 import frc.robot.subsystems.Carriage.Wrist;
 import frc.robot.subsystems.Carriage.CarriageSystem.CarriageStates;
 import frc.robot.subsystems.Carriage.Intake.IntakeStates;
+import frc.robot.subsystems.Vision.LimelightSubsystem;
 
 public class RobotContainer {
     private double MaxSpeed = TunerConstants.kSpeedAt12Volts.in(MetersPerSecond); // kSpeedAt12Volts desired top speed
@@ -53,6 +54,7 @@ public class RobotContainer {
     private final Intake intake = new Intake();
     private final Wrist wrist = new Wrist();
     private final CarriageSystem carriage = new CarriageSystem(elevator, intake, wrist);
+    private final LimelightSubsystem limelight = new LimelightSubsystem();
 
     // Pathplanner auto chooser
     private final SendableChooser<Command> autoChooser;
