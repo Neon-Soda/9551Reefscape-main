@@ -85,6 +85,10 @@ public class RobotContainer {
             intake.setAlgaeTransport(false);
         }));
 
+        NamedCommands.registerCommand("Movement", new InstantCommand(() -> {
+            carriage.setState(CarriageStates.OffSet);
+        }));
+
         // Construct pathplanner auto chooser
         autoChooser = AutoBuilder.buildAutoChooser("Default");
 
