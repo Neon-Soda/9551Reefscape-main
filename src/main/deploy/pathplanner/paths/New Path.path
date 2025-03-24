@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 6.161201414289156,
-        "y": 6.150462062256809
+        "x": 2.0,
+        "y": 7.0
       },
       "prevControl": null,
       "nextControl": {
-        "x": 5.729188573421345,
-        "y": 6.073696364307125
+        "x": 3.0,
+        "y": 7.0
       },
       "isLocked": false,
-      "linkedName": "Reef Position"
+      "linkedName": null
     },
     {
       "anchor": {
-        "x": 5.1042529646114785,
-        "y": 5.520004200127432
+        "x": 4.0,
+        "y": 6.0
       },
       "prevControl": {
-        "x": 5.445381225242844,
-        "y": 5.736779109209131
+        "x": 3.0,
+        "y": 6.0
       },
       "nextControl": null,
       "isLocked": false,
@@ -29,35 +29,9 @@
     }
   ],
   "rotationTargets": [],
-  "constraintZones": [
-    {
-      "name": "Constraints Zone",
-      "minWaypointRelativePos": 0.0,
-      "maxWaypointRelativePos": 0.30173243503368746,
-      "constraints": {
-        "maxVelocity": 0.75,
-        "maxAcceleration": 3.0,
-        "maxAngularVelocity": 540.0,
-        "maxAngularAcceleration": 720.0,
-        "nominalVoltage": 12.0,
-        "unlimited": false
-      }
-    }
-  ],
+  "constraintZones": [],
   "pointTowardsZones": [],
-  "eventMarkers": [
-    {
-      "name": "ReefL4",
-      "waypointRelativePos": 0.0,
-      "endWaypointRelativePos": null,
-      "command": {
-        "type": "named",
-        "data": {
-          "name": "ReefL4"
-        }
-      }
-    }
-  ],
+  "eventMarkers": [],
   "globalConstraints": {
     "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
@@ -68,13 +42,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -120.11176495242852
+    "rotation": 0.0
   },
   "reversed": false,
   "folder": "Test Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -120.73548770192006
+    "rotation": 0.0
   },
   "useDefaultConstraints": true
 }

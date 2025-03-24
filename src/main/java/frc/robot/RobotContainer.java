@@ -96,7 +96,6 @@ public class RobotContainer {
     private void configureBindings() {
         // Note that X is defined as forward according to WPILib convention,
         // and Y is defined as to the left according to WPILib convention.
-        
 
         chassisController.cross().whileTrue(drivetrain.applyRequest(() -> brake));
         chassisController.circle().whileTrue(drivetrain.applyRequest(() ->
@@ -172,9 +171,9 @@ public class RobotContainer {
             carriage.setState(CarriageStates.Processor);
         }));
         
-        // subsystemController.L1().onTrue(new InstantCommand(() -> {
-        //     carriage.setState(CarriageStates.Net);
-        // })); 
+        subsystemController.L1().onTrue(new InstantCommand(() -> {
+            carriage.setState(CarriageStates.Net);
+        })); 
                                   
         subsystemController.R2().onTrue(new InstantCommand(() -> {
             carriage.setForceWristRotate(true);
