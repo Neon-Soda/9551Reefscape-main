@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.732224025974026,
-        "y": 3.099066558441558
+        "x": 3.703733766233766,
+        "y": 3.0563311688311687
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.016278838657243,
-        "y": 3.4773603413231617
+        "x": 4.0741096268610955,
+        "y": 3.463081872584581
       },
       "isLocked": false,
-      "linkedName": "Middle Left 3 End"
+      "linkedName": "8 Blue C"
     },
     {
       "anchor": {
-        "x": 3.0199675324675326,
-        "y": 2.0591720779220783
+        "x": 1.5384740259740262,
+        "y": 0.5919237012987014
       },
       "prevControl": {
-        "x": 2.869181432733811,
-        "y": 1.8597640737520043
+        "x": 1.3706381960691902,
+        "y": 0.40663707414996475
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "Left Source"
     }
   ],
   "rotationTargets": [],
@@ -42,13 +42,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 0.0
+    "rotation": 53.447527247908496
   },
   "reversed": false,
   "folder": "Middle Left Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": 57.804266065286754
+    "rotation": 56.30993247402026
   },
   "useDefaultConstraints": false
 }

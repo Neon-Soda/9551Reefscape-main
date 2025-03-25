@@ -8,24 +8,24 @@
       },
       "prevControl": null,
       "nextControl": {
-        "x": 3.157982881687118,
-        "y": 2.488069065200592
+        "x": 2.996560414953139,
+        "y": 2.2428294560240385
       },
       "isLocked": false,
-      "linkedName": "Left 3 End"
+      "linkedName": "8 Blue C"
     },
     {
       "anchor": {
-        "x": 2.849025974025974,
-        "y": 1.995068993506493
+        "x": 1.5384740259740262,
+        "y": 0.5919237012987014
       },
       "prevControl": {
-        "x": 3.06414992028004,
-        "y": 2.1224333831453457
+        "x": 1.8415743519315413,
+        "y": 0.9350749004851822
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "Left Source"
     }
   ],
   "rotationTargets": [],
@@ -42,7 +42,7 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 0.0
+    "rotation": 53.447527247908496
   },
   "reversed": false,
   "folder": "Left Paths",

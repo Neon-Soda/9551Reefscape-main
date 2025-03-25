@@ -8,11 +8,11 @@
       },
       "prevControl": null,
       "nextControl": {
-        "x": 7.020431922660298,
-        "y": 2.925849347286013
+        "x": 6.434448493269231,
+        "y": 3.046327873451204
       },
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "Left Start"
     },
     {
       "anchor": {
@@ -20,12 +20,12 @@
         "y": 3.0278409090909086
       },
       "prevControl": {
-        "x": 4.995161850128325,
-        "y": 3.0667367484463934
+        "x": 4.937837843403614,
+        "y": 3.0279501923927765
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Left 1 End"
+      "linkedName": "5 Blue C"
     }
   ],
   "rotationTargets": [],
@@ -33,7 +33,7 @@
   "pointTowardsZones": [],
   "eventMarkers": [],
   "globalConstraints": {
-    "maxVelocity": 3.0,
+    "maxVelocity": 1.0,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,

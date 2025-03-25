@@ -8,11 +8,11 @@
       },
       "prevControl": null,
       "nextControl": {
-        "x": 1.147434536017626,
-        "y": 0.20642468398261482
+        "x": 1.0626510444449775,
+        "y": 0.09244876610071506
       },
       "isLocked": false,
-      "linkedName": "Left 2 End"
+      "linkedName": "Left Source"
     },
     {
       "anchor": {
@@ -20,12 +20,12 @@
         "y": 3.0563311688311687
       },
       "prevControl": {
-        "x": 3.925422085235763,
-        "y": 3.1718919286853198
+        "x": 3.9447482256460376,
+        "y": 3.2154685600009976
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Left 3 End"
+      "linkedName": "8 Blue C"
     }
   ],
   "rotationTargets": [],

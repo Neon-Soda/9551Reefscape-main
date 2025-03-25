@@ -7,7 +7,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "1Middle Right to Reef"
+            "pathName": "1Right To Top Left Reef Blue"
           }
         },
         {
@@ -61,7 +61,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "2Middle Right Reef to Source"
+            "pathName": "2Right Reef to Source"
           }
         },
         {
@@ -91,7 +91,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "3Middle Right Source to Reef"
+            "pathName": "3Right Source to Reef"
           }
         },
         {
@@ -139,7 +139,85 @@
         {
           "type": "path",
           "data": {
-            "pathName": "4Middle Right Reef to Reset"
+            "pathName": "4Right Reef to Reset"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Intake"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.2
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Stop_Intake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "5Right Source to Reef"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "ReefL4"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.4
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralScore"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "StopCoralScore"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Movement"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.3
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "6Right Reef to Reset"
           }
         }
       ]

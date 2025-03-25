@@ -3,16 +3,16 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 1.489,
-        "y": 7.501
+        "x": 1.6809253246753246,
+        "y": 7.3939732142857135
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.016140376662322,
-        "y": 5.6968210506179675
+        "x": 2.208065701337646,
+        "y": 5.589794264903681
       },
       "isLocked": false,
-      "linkedName": "Middle Right 2 End"
+      "linkedName": "Right Source"
     },
     {
       "anchor": {
@@ -25,7 +25,7 @@
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Middle Right 3 End"
+      "linkedName": "11 Blue C"
     }
   ],
   "rotationTargets": [],
@@ -48,7 +48,7 @@
   "folder": "Middle Right Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -50.59933933652056
+    "rotation": -53.49855887949366
   },
-  "useDefaultConstraints": false
+  "useDefaultConstraints": true
 }

@@ -12,20 +12,20 @@
         "y": 4.4517970733695025
       },
       "isLocked": true,
-      "linkedName": "Middle Right 1 End"
+      "linkedName": "3 Blue C"
     },
     {
       "anchor": {
-        "x": 1.489,
-        "y": 7.501
+        "x": 1.6809253246753246,
+        "y": 7.3939732142857135
       },
       "prevControl": {
-        "x": 2.0018246753246753,
-        "y": 7.351426136363638
+        "x": 2.1937499999999996,
+        "y": 7.244399350649351
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Middle Right 2 End"
+      "linkedName": "Right Source"
     }
   ],
   "rotationTargets": [],
@@ -42,7 +42,7 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -50.59933933652056
+    "rotation": -53.49855887949366
   },
   "reversed": false,
   "folder": "Middle Right Paths",
@@ -50,5 +50,5 @@
     "velocity": 0,
     "rotation": 180.0
   },
-  "useDefaultConstraints": false
+  "useDefaultConstraints": true
 }

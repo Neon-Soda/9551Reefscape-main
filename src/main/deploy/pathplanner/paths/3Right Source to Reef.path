@@ -12,20 +12,20 @@
         "y": 7.636417690737435
       },
       "isLocked": false,
-      "linkedName": "Right 2 End"
+      "linkedName": "Right Source"
     },
     {
       "anchor": {
         "x": 3.7179788961038955,
-        "y": 4.986546266233766
+        "y": 5.0150365259740255
       },
       "prevControl": {
         "x": 3.5278710920646934,
-        "y": 5.148900886874487
+        "y": 5.177391146614746
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Right 3 End"
+      "linkedName": "11 Blue C"
     }
   ],
   "rotationTargets": [],
@@ -42,7 +42,7 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -58.339248903363455
+    "rotation": -59.99999999999999
   },
   "reversed": false,
   "folder": "Right Paths",

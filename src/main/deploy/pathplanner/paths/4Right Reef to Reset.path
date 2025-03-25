@@ -4,28 +4,28 @@
     {
       "anchor": {
         "x": 3.7179788961038955,
-        "y": 4.986546266233766
+        "y": 5.0150365259740255
       },
       "prevControl": null,
       "nextControl": {
-        "x": 3.4950651589220643,
-        "y": 5.771659651583114
+        "x": 3.038349127633513,
+        "y": 5.816747608594431
       },
       "isLocked": false,
-      "linkedName": "Right 3 End"
+      "linkedName": "11 Blue C"
     },
     {
       "anchor": {
-        "x": 3.041335227272727,
-        "y": 6.126156655844155
+        "x": 1.6809253246753246,
+        "y": 7.3939732142857135
       },
       "prevControl": {
-        "x": 2.855196887616659,
-        "y": 6.293047394083526
+        "x": 1.4988689996969247,
+        "y": 7.6022106604391295
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "Right Source"
     }
   ],
   "rotationTargets": [],
@@ -42,13 +42,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 0.0
+    "rotation": -53.49855887949366
   },
   "reversed": false,
   "folder": "Right Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -58.339248903363455
+    "rotation": -59.99999999999999
   },
   "useDefaultConstraints": false
 }

@@ -97,6 +97,18 @@
         {
           "type": "named",
           "data": {
+            "name": "ReefL4"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.4
+          }
+        },
+        {
+          "type": "named",
+          "data": {
             "name": "CoralScore"
           }
         },
@@ -128,6 +140,84 @@
           "type": "path",
           "data": {
             "pathName": "4Middle Left Reef to Reset"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Intake"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.2
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Stop_Intake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "5Middle Left Source to Reef"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "ReefL4"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.4
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralScore"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "StopCoralScore"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Movement"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.3
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "6Middle Left Reef to Reset"
           }
         }
       ]

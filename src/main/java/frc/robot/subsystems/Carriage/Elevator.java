@@ -27,11 +27,11 @@ public class Elevator extends SubsystemBase{
 
     public void configElevator() {
         leftMotorConfig.MotorOutput.Inverted = InvertedValue.CounterClockwise_Positive;
-        leftMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Brake;
+        leftMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Coast;
         leftMotorConfig.MotorOutput.DutyCycleNeutralDeadband = 0.04;
 
         rightMotorConfig.MotorOutput.Inverted = InvertedValue.Clockwise_Positive;
-        rightMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Brake;
+        rightMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Coast;
         rightMotorConfig.MotorOutput.DutyCycleNeutralDeadband = 0.04;
 
         leftMotorConfig.CurrentLimits.SupplyCurrentLimitEnable = true;
