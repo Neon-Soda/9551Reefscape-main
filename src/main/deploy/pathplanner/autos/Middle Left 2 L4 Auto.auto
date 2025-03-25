@@ -7,7 +7,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "1Right To Top Left Reef Blue"
+            "pathName": "1Middle Left to Reef"
           }
         },
         {
@@ -61,7 +61,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "2Right Reef to Source"
+            "pathName": "2Middle Left Reef to Source"
           }
         },
         {
@@ -91,19 +91,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "3Right Source to Reef"
-          }
-        },
-        {
-          "type": "named",
-          "data": {
-            "name": "ReefL4"
-          }
-        },
-        {
-          "type": "wait",
-          "data": {
-            "waitTime": 1.4
+            "pathName": "3Middle Left Source to Reef"
           }
         },
         {
@@ -139,7 +127,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "4Right Reef to Reset"
+            "pathName": "4Middle Left Reef to Reset"
           }
         }
       ]
