@@ -104,7 +104,20 @@ public class Constants {
     }
 
     public static final class VisionConstants {
-        public static final String limelightName = "";
+        public static final String limeLightName = "";
         public static final int[] targetAprilTags = {6, 7, 8, 9, 10, 11, 17, 18, 19, 20, 21, 22};
+
+        // All the target values are in degrees
+        public static final double aprilTagCentricTX = 0;
+        public static final double aprilTagCentricTY = -3.55;
+        public static final double aprilTagCentricTA = 34.581;
+        public static final double centricTolerance = 0.15;
+
+        // All the offsets are in meters
+        public static final double limeLightUpOffset = 0.3;
+        public static final double limeLightFowardOffset = 0.2;
+        public static final double limeLightSideOffset = 0.43;
+
+        public static final double bumperThickness = 0.08;
     }
 }

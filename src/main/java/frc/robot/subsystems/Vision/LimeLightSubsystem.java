@@ -22,8 +22,8 @@ public class LimeLightSubsystem extends SubsystemBase {
     }
 
     public void configLimelight() {
-        LimelightHelpers.setCameraPose_RobotSpace(VisionConstants.limelightName, 0, 0, 0, 0, 0, 0);
-        LimelightHelpers.SetFiducialIDFiltersOverride(VisionConstants.limelightName, VisionConstants.targetAprilTags);
+        LimelightHelpers.setCameraPose_RobotSpace(VisionConstants.limeLightName, 0, 0, 0, 0, 0, 0);
+        LimelightHelpers.SetFiducialIDFiltersOverride(VisionConstants.limeLightName, VisionConstants.targetAprilTags);
     }
 
     @Override
@@ -76,27 +76,28 @@ public class LimeLightSubsystem extends SubsystemBase {
     }
 
     public double getTX() {
-        return LimelightHelpers.getTX(VisionConstants.limelightName);
+        return LimelightHelpers.getTX(VisionConstants.limeLightName);
     }
 
     public double getTY() {
-        return LimelightHelpers.getTY(VisionConstants.limelightName);
+        return LimelightHelpers.getTY(VisionConstants.limeLightName);
     }
 
     public Angle getTXAngle() {
-        return Angle.ofBaseUnits(LimelightHelpers.getTX(VisionConstants.limelightName), Degrees);
+        return Angle.ofBaseUnits(LimelightHelpers.getTX(VisionConstants.limeLightName), Degrees);
     }
 
     public Angle getTYAngle() {
-        return Angle.ofBaseUnits(LimelightHelpers.getTY(VisionConstants.limelightName), Degrees);
+        return Angle.ofBaseUnits(LimelightHelpers.getTY(VisionConstants.limeLightName), Degrees);
     }
 
     public double getTA() {
-        return LimelightHelpers.getTA(VisionConstants.limelightName);
+        return LimelightHelpers.getTA(VisionConstants.limeLightName);
     }
 
-    public boolean getTV() {
-        return LimelightHelpers.getTV(VisionConstants.limelightName);
+    // TV stands for valid target
+    public boolean hasTarget() {
+        return LimelightHelpers.getTV(VisionConstants.limeLightName);
     }
 
     public double getClosestTX() {
