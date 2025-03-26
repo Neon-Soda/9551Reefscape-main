@@ -21,7 +21,8 @@ public class CarriageSystem extends SubsystemBase{
         AlgaeL1,
         AlgaeL2,
         Net,
-        Processor
+        Processor,
+        Climb
     }
 
     CarriageStates currentState = CarriageStates.OffSet;
@@ -159,6 +160,10 @@ public class CarriageSystem extends SubsystemBase{
                     wrist.setWristRotation(Carriage.wristProcessorPosition);
                     intake.setAlgaeTransport(true);
                 }
+            }
+
+            case Climb -> {
+                wrist.setWristRotation(Carriage.wristLiftPosition);
             }
             
             default -> {

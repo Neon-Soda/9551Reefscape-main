@@ -51,6 +51,9 @@ public class Constants {
         public static final double minHeight = elevatorOffSetPosition;
         public static final double maxHeight = 5.47;
 
+        public static final double elevatorClimbUpDutyCycleOut = 0.65;
+        public static final double elevatorClimbDownDutyCycleOut = -0.45;
+
         public static final int intakeMotorID = 15;
         public static final double intakeWheelDiameter = 0.1;
         public static final int intakeCanRangeID = 16;

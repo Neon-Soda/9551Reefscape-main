@@ -21,17 +21,19 @@ public class Elevator extends SubsystemBase{
 
     double currentPosition = 0.0;
 
+    private boolean isClimbing = false;
+
     public Elevator() {
         configElevator();
     }
 
     public void configElevator() {
         leftMotorConfig.MotorOutput.Inverted = InvertedValue.CounterClockwise_Positive;
-        leftMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Coast;
+        leftMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Brake;
         leftMotorConfig.MotorOutput.DutyCycleNeutralDeadband = 0.04;
 
         rightMotorConfig.MotorOutput.Inverted = InvertedValue.Clockwise_Positive;
-        rightMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Coast;
+        rightMotorConfig.MotorOutput.NeutralMode = NeutralModeValue.Brake;
         rightMotorConfig.MotorOutput.DutyCycleNeutralDeadband = 0.04;
 
         leftMotorConfig.CurrentLimits.SupplyCurrentLimitEnable = true;
@@ -101,6 +103,14 @@ public class Elevator extends SubsystemBase{
     public void stopElevator() {
         leftMotor.stopMotor();
         rightMotor.stopMotor();
+    }
+
+    public void climbUp() {
+        setElevatorDutyCycleOut(Carriage.elevatorClimbUpDutyCycleOut);
+    }
+
+    public void climbDown() {
+        setElevatorDutyCycleOut(Carriage.elevatorClimbDownDutyCycleOut);
     }
 
     public double getHeight(){

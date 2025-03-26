@@ -218,13 +218,27 @@ public class RobotContainer {
             intake.setAlgaeTransport(false);
         }));
 
-        subsystemController.create().onTrue(new InstantCommand(() -> {
-            intake.playSong();
+        // subsystemController.create().onTrue(new InstantCommand(() -> {
+        //     intake.playSong();
+        // }));
+
+        // subsystemController.options().onTrue(new InstantCommand(() -> {
+        //     intake.stopSong();
+        // }));
+
+        subsystemController.R2().onTrue(new InstantCommand(() -> {
+            carriage.setState(CarriageStates.Climb);
+            elevator.climbUp();
+        })).toggleOnFalse(new InstantCommand(() -> {
+            elevator.stopElevator();
         }));
 
-        subsystemController.options().onTrue(new InstantCommand(() -> {
-            intake.stopSong();
-        }));
+        subsystemController.L2().onTrue(new InstantCommand(() -> {
+            carriage.setState(CarriageStates.Climb);
+            elevator.climbDown();
+        })).toggleOnFalse(new InstantCommand(() -> {
+            elevator.stopElevator();
+        }));        
     }
 
     public Command getAutonomousCommand() {
