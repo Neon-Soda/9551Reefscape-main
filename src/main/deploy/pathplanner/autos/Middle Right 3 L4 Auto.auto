@@ -19,7 +19,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.4
+            "waitTime": 1.1
           }
         },
         {
@@ -31,19 +31,13 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.0
+            "waitTime": 0.5
           }
         },
         {
           "type": "named",
           "data": {
             "name": "StopCoralScore"
-          }
-        },
-        {
-          "type": "wait",
-          "data": {
-            "waitTime": 0.1
           }
         },
         {
@@ -67,7 +61,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.0
+            "waitTime": 0.6
           }
         },
         {
@@ -103,7 +97,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.4
+            "waitTime": 1.1
           }
         },
         {
@@ -115,7 +109,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.0
+            "waitTime": 0.3
           }
         },
         {
@@ -131,27 +125,21 @@
           }
         },
         {
-          "type": "wait",
-          "data": {
-            "waitTime": 0.3
-          }
-        },
-        {
           "type": "path",
           "data": {
             "pathName": "4Middle Right Reef to Source"
           }
         },
         {
-          "type": "named",
+          "type": "wait",
           "data": {
-            "name": "Intake"
+            "waitTime": 0.6
           }
         },
         {
-          "type": "wait",
+          "type": "named",
           "data": {
-            "waitTime": 1.0
+            "name": "Intake"
           }
         },
         {
@@ -181,7 +169,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.4
+            "waitTime": 1.1
           }
         },
         {
@@ -193,7 +181,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 1.0
+            "waitTime": 0.3
           }
         },
         {
@@ -206,12 +194,6 @@
           "type": "named",
           "data": {
             "name": "Movement"
-          }
-        },
-        {
-          "type": "wait",
-          "data": {
-            "waitTime": 0.3
           }
         },
         {

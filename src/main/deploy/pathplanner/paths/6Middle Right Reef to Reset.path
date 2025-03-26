@@ -3,13 +3,13 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.9815137987012985,
-        "y": 5.185978084415584
+        "x": 3.817694805194805,
+        "y": 5.527861201298702
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.230739959812942,
-        "y": 5.166323043902953
+        "x": 4.066920966306448,
+        "y": 5.50820616078607
       },
       "isLocked": false,
       "linkedName": "12 Blue C"
@@ -38,7 +38,7 @@
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
     "nominalVoltage": 12.0,
-    "unlimited": false
+    "unlimited": true
   },
   "goalEndState": {
     "velocity": 0,
