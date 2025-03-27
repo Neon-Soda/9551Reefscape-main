@@ -21,7 +21,6 @@ public class Elevator extends SubsystemBase{
 
     double currentPosition = 0.0;
 
-    private boolean isClimbing = false;
 
     public Elevator() {
         configElevator();

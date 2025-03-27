@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.5470373376623376,
-        "y": 5.378287337662337
+        "x": 3.497179383116883,
+        "y": 4.851217532467532
       },
       "prevControl": null,
       "nextControl": {
-        "x": 3.834348955533704,
-        "y": 5.009423619159364
+        "x": 3.8940589543862774,
+        "y": 4.431511084900562
       },
       "isLocked": false,
       "linkedName": "11 Blue C"
     },
     {
       "anchor": {
-        "x": 1.5527191558441558,
-        "y": 7.543547077922077
+        "x": 1.1182426948051947,
+        "y": 7.985146103896103
       },
       "prevControl": {
-        "x": 1.3956148898537284,
-        "y": 7.750839362197914
+        "x": 0.9351735685413212,
+        "y": 8.155397961474755
       },
       "nextControl": null,
       "isLocked": false,
@@ -38,7 +38,7 @@
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
     "nominalVoltage": 12.0,
-    "unlimited": true
+    "unlimited": false
   },
   "goalEndState": {
     "velocity": 0,

@@ -122,7 +122,7 @@ public class CarriageSystem extends SubsystemBase{
                     wrist.setWristRotation(Carriage.wristL4Position);
                 }
             }
-
+            
             case AlgaeL1 -> {
                 wrist.setWristRotation(Carriage.wristLiftPosition);
                 if(wrist.atDesiredRotation(Carriage.wristLiftPosition)) {
