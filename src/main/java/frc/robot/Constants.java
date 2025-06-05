@@ -92,7 +92,7 @@ public class Constants {
         public static final double wristTolerance = 0.075;
 
         public static final double wristOffSetPosition = -0.025;
-        public static final double wristLiftPosition = 0.111;
+        public static final double wristLiftPosition = 0.085;
         public static final double wristL2L3Position = 0.178;
         public static final double wristL4Position = 0.35;
         public static final double wristAlgaePosition = 0.938;

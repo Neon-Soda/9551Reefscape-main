@@ -124,8 +124,8 @@ public class CarriageSystem extends SubsystemBase{
             }
 
             case AlgaeL1 -> {
-                wrist.setWristRotation(Carriage.wristLiftPosition);
-                if(wrist.atDesiredRotation(Carriage.wristLiftPosition)) {
+                wrist.setWristRotation(Carriage.wristAlgaeLiftPosition);
+                if(wrist.atDesiredRotation(Carriage.wristAlgaeLiftPosition)) {
                     elevator.setElevatorHeight(Carriage.elevatorAlgaeL1Position);
                 }  
                 if(elevator.atDesiredHeight(Carriage.elevatorAlgaeL1Position,true) || forceWristRotate) {
