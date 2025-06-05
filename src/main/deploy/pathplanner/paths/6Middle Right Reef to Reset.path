@@ -3,16 +3,16 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.817694805194805,
-        "y": 5.527861201298702
+        "x": 3.497179383116883,
+        "y": 4.851217532467532
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.066920966306448,
-        "y": 5.50820616078607
+        "x": 3.746405544228527,
+        "y": 4.831562491954901
       },
       "isLocked": false,
-      "linkedName": "12 Blue C"
+      "linkedName": "11 Blue C"
     },
     {
       "anchor": {
@@ -33,12 +33,12 @@
   "pointTowardsZones": [],
   "eventMarkers": [],
   "globalConstraints": {
-    "maxVelocity": 1.0,
+    "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
     "nominalVoltage": 12.0,
-    "unlimited": true
+    "unlimited": false
   },
   "goalEndState": {
     "velocity": 0,
@@ -48,7 +48,7 @@
   "folder": "Middle Right Paths",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -58.63632159195782
+    "rotation": -59.99999999999999
   },
-  "useDefaultConstraints": true
+  "useDefaultConstraints": false
 }

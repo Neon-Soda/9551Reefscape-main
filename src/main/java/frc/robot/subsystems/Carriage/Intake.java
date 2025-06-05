@@ -63,7 +63,6 @@ public class Intake extends SubsystemBase{
         intakeCanRange.getConfigurator().apply(canRangeConfig);
 
         player.addInstrument(intakeMotor);
-        var status = player.loadMusic("mario.chrp");
     }
 
     public void setIntakeVol(double vol) {

@@ -42,7 +42,7 @@ public class Constants {
         public static final double elevatorL2Position = 1.251;
         public static final double elevatorL3Position = 2.58;
         public static final double elevatorL4Position = 5.2;
-        public static final double elevatorAlgaeL1Position = 2.25;
+        public static final double elevatorAlgaeL1Position = 2.125;
         public static final double elevatorAlgaeL2Position = 3.85;
         public static final double elevatorAlgaeOffSetPosition = 1;
         public static final double elevatorNetPosition = 5.47;
@@ -52,7 +52,7 @@ public class Constants {
         public static final double maxHeight = 5.47;
 
         public static final double elevatorClimbUpDutyCycleOut = 0.65;
-        public static final double elevatorClimbDownDutyCycleOut = -0.45;
+        public static final double elevatorClimbDownDutyCycleOut = -0.35;
 
         public static final int intakeMotorID = 15;
         public static final double intakeWheelDiameter = 0.1;

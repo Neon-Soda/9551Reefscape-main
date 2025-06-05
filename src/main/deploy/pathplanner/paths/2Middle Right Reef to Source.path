@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 5.677,
-        "y": 4.267
+        "x": 5.484375,
+        "y": 4.245799512987013
       },
       "prevControl": null,
       "nextControl": {
-        "x": 6.067849345181613,
-        "y": 5.667658141077018
+        "x": 5.875224345181613,
+        "y": 5.64645765406403
       },
       "isLocked": true,
       "linkedName": "3 Blue C"
     },
     {
       "anchor": {
-        "x": 1.5527191558441558,
-        "y": 7.543547077922077
+        "x": 1.1182426948051947,
+        "y": 7.985146103896103
       },
       "prevControl": {
-        "x": 2.763555194805195,
-        "y": 6.824168019480519
+        "x": 2.329078733766234,
+        "y": 7.265767045454544
       },
       "nextControl": null,
       "isLocked": false,
@@ -33,12 +33,12 @@
   "pointTowardsZones": [],
   "eventMarkers": [],
   "globalConstraints": {
-    "maxVelocity": 1.0,
+    "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
     "nominalVoltage": 12.0,
-    "unlimited": true
+    "unlimited": false
   },
   "goalEndState": {
     "velocity": 0,
@@ -50,5 +50,5 @@
     "velocity": 0,
     "rotation": 180.0
   },
-  "useDefaultConstraints": true
+  "useDefaultConstraints": false
 }
