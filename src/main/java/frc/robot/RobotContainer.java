@@ -166,10 +166,10 @@ public class RobotContainer {
         }));
 
         // Reset elevator and put wrist back to offeset, prevent error accumulating in elevator
-        subsystemController.PS().onTrue(new InstantCommand(() -> {
-            elevator.resetPosistion();
-            wrist.setWristRotation(Carriage.wristOffSetPosition);
-        }));
+        // subsystemController.PS().onTrue(new InstantCommand(() -> {
+        //     elevator.resetPosistion();
+        //     wrist.setWristRotation(Carriage.wristOffSetPosition);
+        // }));
 
         subsystemController.povDown().onTrue(new InstantCommand(() -> {
             carriage.setState(CarriageStates.AlgaeL1);
@@ -183,9 +183,9 @@ public class RobotContainer {
             carriage.setState(CarriageStates.Processor);
         }));
         
-        subsystemController.L1().onTrue(new InstantCommand(() -> {
-            carriage.setState(CarriageStates.Net);
-        })); 
+        // subsystemController.L1().onTrue(new InstantCommand(() -> {
+        //     carriage.setState(CarriageStates.Net);
+        // })); 
                                   
         subsystemController.R2().onTrue(new InstantCommand(() -> {
             carriage.setForceWristRotate(true);
