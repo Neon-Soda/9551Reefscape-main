@@ -125,15 +125,75 @@
           }
         },
         {
+          "type": "path",
+          "data": {
+            "pathName": "4Middle Right Reef to Source"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
+          }
+        },
+        {
           "type": "named",
           "data": {
             "name": "Intake"
           }
         },
         {
+          "type": "path",
+          "data": {
+            "pathName": "5Middle Right Source to Reef"
+          }
+        },
+        {
           "type": "named",
           "data": {
             "name": "Stop_Intake"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "ReefL4"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.5
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "CoralScore"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.3
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "StopCoralScore"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "Movement"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.0
           }
         },
         {

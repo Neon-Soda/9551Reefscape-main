@@ -91,7 +91,6 @@ public class RobotContainer {
 
         NamedCommands.registerCommand("Intake", new InstantCommand(() -> {
             intake.setState(IntakeStates.Intake,CarriageStates.OffSet);
-
         }));
 
         NamedCommands.registerCommand("Stop_Intake", new InstantCommand(() -> {

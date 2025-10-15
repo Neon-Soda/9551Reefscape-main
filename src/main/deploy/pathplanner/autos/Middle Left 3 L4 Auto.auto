@@ -77,21 +77,15 @@
           }
         },
         {
-          "type": "wait",
+          "type": "path",
           "data": {
-            "waitTime": 0.2
+            "pathName": "3Middle Left Source to Reef"
           }
         },
         {
           "type": "named",
           "data": {
             "name": "Stop_Intake"
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "3Middle Left Source to Reef"
           }
         },
         {
@@ -155,21 +149,15 @@
           }
         },
         {
-          "type": "wait",
+          "type": "path",
           "data": {
-            "waitTime": 0.2
+            "pathName": "5Middle Left Source to Reef"
           }
         },
         {
           "type": "named",
           "data": {
             "name": "Stop_Intake"
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "5Middle Left Source to Reef"
           }
         },
         {

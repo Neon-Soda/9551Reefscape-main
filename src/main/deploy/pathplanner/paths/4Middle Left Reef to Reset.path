@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.703733766233766,
-        "y": 3.0563311688311687
+        "x": 3.536372950819672,
+        "y": 3.1738729508196717
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.0741096268610955,
-        "y": 3.463081872584581
+        "x": 3.9067488114470015,
+        "y": 3.580623654573084
       },
       "isLocked": false,
       "linkedName": "8 Blue C"
     },
     {
       "anchor": {
-        "x": 1.5384740259740262,
-        "y": 0.5919237012987014
+        "x": 1.092,
+        "y": 0.35899999999999976
       },
       "prevControl": {
-        "x": 1.3706381960691902,
-        "y": 0.40663707414996475
+        "x": 0.9241641700951642,
+        "y": 0.1737133728512631
       },
       "nextControl": null,
       "isLocked": false,
@@ -33,7 +33,7 @@
   "pointTowardsZones": [],
   "eventMarkers": [],
   "globalConstraints": {
-    "maxVelocity": 1.0,
+    "maxVelocity": 3.0,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,

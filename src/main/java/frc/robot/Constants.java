@@ -24,23 +24,23 @@ public class Constants {
         public static final double Vel = 10.0;
         public static final double Jer = 0.0;
 
-        public static final double elevatorKP = 3.25; 
+        public static final double elevatorKP = 3.715; 
         public static final double elevatorKI = 0.0;
-        public static final double elevatorKD = 0.625;
+        public static final double elevatorKD = 0.635;
         public static final double elevatorKS = 0.030909; 
-        public static final double elevatorKV = 1.5;
-        public static final double elevatorKA = 0.0275;
+        public static final double elevatorKV = 1.7;
+        public static final double elevatorKA = 0.0315;
         public static final double elevatorKG = 0.785;
 
         // Larger tolerance on top so wrist can always flip over
         public static final double elevatorTolerance = 0.325;
-        public static final double elevatorTopperTolerance = 0.625;
+        public static final double elevatorTopperTolerance = 0.685;
 
         public static final double elevatorOffSetTolerace = 0.185;
         public static final double elevatorOffSetPosition = -elevatorOffSetTolerace;
         public static final double elevatorL1Position = elevatorOffSetPosition;
-        public static final double elevatorL2Position = 1.251;
-        public static final double elevatorL3Position = 2.58;
+        public static final double elevatorL2Position = 0.95;
+        public static final double elevatorL3Position = 2.5;
         public static final double elevatorL4Position = 5.2;
         public static final double elevatorAlgaeL1Position = 2.125;
         public static final double elevatorAlgaeL2Position = 3.85;
@@ -92,8 +92,8 @@ public class Constants {
         public static final double wristTolerance = 0.075;
 
         public static final double wristOffSetPosition = -0.025;
-        public static final double wristLiftPosition = 0.085;
-        public static final double wristL2L3Position = 0.178;
+        public static final double wristLiftPosition = 0.08;
+        public static final double wristL2L3Position = 0.1;
         public static final double wristL4Position = 0.35;
         public static final double wristAlgaePosition = 0.938;
         public static final double wristAlgaeLiftPosition = 0.65;
